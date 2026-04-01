@@ -19,7 +19,7 @@
     }
     .header {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 3rem;
     }
     .logo {
       width: 80px;
@@ -42,26 +42,12 @@
       margin-bottom: 1.5rem;
     }
     .intro {
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #C9D1D9;
-      line-height: 1.6;
-      max-width: 560px;
-      margin: 0 auto 1.5rem;
+      line-height: 1.7;
+      max-width: 580px;
+      margin: 0 auto;
     }
-    .install-box {
-      background: #161B22;
-      border: 1px solid #30363D;
-      border-radius: 8px;
-      padding: 0.8rem 1.2rem;
-      display: inline-block;
-      margin-bottom: 2.5rem;
-    }
-    .install-box code {
-      color: #E6EDF3;
-      font-family: 'SF Mono', 'Fira Code', monospace;
-      font-size: 0.85rem;
-    }
-    .install-box .dim { color: #484F58; }
     h2 {
       font-size: 1.1rem;
       font-weight: 600;
@@ -69,6 +55,38 @@
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin: 2.5rem 0 0.8rem;
+    }
+    .hero-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .hero-card {
+      background: #161B22;
+      border: 1px solid #30363D;
+      border-radius: 12px;
+      padding: 1.5rem;
+      text-decoration: none;
+      transition: border-color 0.2s;
+      text-align: center;
+    }
+    a.hero-card:hover { border-color: #58A6FF; }
+    .hero-card .hero-logo {
+      width: 48px;
+      height: 48px;
+      border-radius: 10px;
+      margin-bottom: 0.8rem;
+    }
+    .hero-card h3 {
+      font-size: 1.1rem;
+      color: #E6EDF3;
+      margin-bottom: 0.3rem;
+    }
+    .hero-card p {
+      font-size: 0.8rem;
+      color: #8B949E;
+      line-height: 1.4;
     }
     .cards {
       display: grid;
@@ -105,10 +123,9 @@
       font-weight: 500;
       margin-bottom: 0.4rem;
     }
-    .label-tool { background: #1F3A5F; color: #58A6FF; }
     .label-framework { background: #1F3A5F; color: #58A6FF; }
+    .label-tool { background: #1F3A5F; color: #58A6FF; }
     .label-solution { background: #1A3F2F; color: #3FB950; }
-    .label-skills { background: #2D1F5F; color: #A78BFA; }
     footer {
       text-align: center;
       color: #484F58;
@@ -122,7 +139,7 @@
     }
     footer a:hover { text-decoration: underline; }
     @media (max-width: 480px) {
-      .cards { grid-template-columns: 1fr; }
+      .hero-cards, .cards { grid-template-columns: 1fr; }
       .card-wide { grid-column: auto; }
       h1 { font-size: 1.8rem; }
     }
@@ -135,32 +152,32 @@
       <h1>echomodel</h1>
       <p class="tagline">AI agent ecosystem</p>
       <p class="intro">
-        Open-source tools, frameworks, and skills for building and running
-        AI agent applications. One CLI to manage skills, MCP servers,
-        and deployments across any agent platform.
+        Open-source frameworks for building AI agent applications,
+        a skills marketplace for extending what agents can do,
+        and production solutions that put it all together.
       </p>
-      <div class="install-box">
-        <code><span class="dim">$</span> pipx install echomodel</code>
+
+      <div class="hero-cards">
+        <a href="https://echoskill.ai" class="hero-card">
+          <img src="brand/echomodel-logo-512.png" alt="echoskill" class="hero-logo">
+          <h3>echoskill</h3>
+          <p>Skills marketplace — reusable capabilities for AI coding agents</p>
+        </a>
+        <a href="https://echofit.ai" class="hero-card">
+          <img src="brand/echomodel-logo-512.png" alt="echofit" class="hero-logo">
+          <h3>echofit</h3>
+          <p>AI-powered fitness and nutrition tracking</p>
+        </a>
       </div>
     </div>
 
-    <h2>Tools</h2>
+    <h2>Solutions</h2>
     <div class="cards">
-      <a href="https://github.com/echomodel/echomodel" class="card card-wide">
-        <span class="label label-tool">cli</span>
-        <h3>em</h3>
-        <p>Cross-platform CLI for managing AI agent skills, MCP servers, and configurations.
-           The missing skill management layer for agents that don't have one natively.</p>
-      </a>
-    </div>
-
-    <h2>Skills</h2>
-    <div class="cards">
-      <a href="https://echoskill.ai" class="card card-wide">
-        <span class="label label-skills">marketplace</span>
-        <h3>echoskill</h3>
-        <p>Reusable skills for AI coding agents — testing, deployment, privacy review,
-           session management, and more. Browse the catalog and install with <code>em</code>.</p>
+      <a href="https://echofit.ai" class="card">
+        <span class="label label-solution">solution</span>
+        <h3>echofit</h3>
+        <p>Log meals, exercises, blood pressure, and vitals through any
+           MCP-compatible agent. Works with Claude, Gemini, and more.</p>
       </a>
     </div>
 
@@ -183,13 +200,13 @@
       </a>
     </div>
 
-    <h2>Solutions</h2>
+    <h2>Developer tools</h2>
     <div class="cards">
-      <a href="https://echofit.ai" class="card">
-        <span class="label label-solution">solution</span>
-        <h3>echofit</h3>
-        <p>AI-powered fitness and nutrition tracking. Log meals, exercises, and vitals
-           through any MCP-compatible agent.</p>
+      <a href="https://github.com/echomodel/echomodel" class="card card-wide">
+        <span class="label label-tool">cli</span>
+        <h3>echomodel (em)</h3>
+        <p>Cross-platform CLI for managing AI agent skills, MCP servers, and configurations.
+           Fills the skill management gap for agents that don't have native install commands.</p>
       </a>
     </div>
   </div>
