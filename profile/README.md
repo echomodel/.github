@@ -1,15 +1,25 @@
 # echomodel
 
-Frameworks for AI agent solutions. The shared foundation powering the echo product family.
+AI-agent-first solutions built on MCP. The AI agent is the interface. Everything else is infrastructure.
+
+## **[MCP Patterns & Philosophy](https://github.com/echomodel/mcp)**
+
+How we build MCP solutions: SDK-first architecture, transport selection, docstring-only tools, module configuration, data-owning vs proxy servers. Start here.
 
 ## Frameworks
 
-- **[mcp-app](https://github.com/echomodel/mcp-app)** — MCP application framework
-- **[app-user](https://github.com/echomodel/app-user)** — Multi-user auth for AI solutions
+| Library | Purpose |
+|---------|---------|
+| [mcp-app](https://github.com/krisrowe/mcp-app) | MCP server framework — config-driven tool discovery, JWT auth, user-identity middleware |
+| [app-user](https://github.com/krisrowe/app-user) | Multi-user auth — registration, tokens, per-user data stores |
+| [gapp](https://github.com/krisrowe/gapp) | Deployment — Cloud Run, secrets, GCS FUSE data volumes, CI/CD |
 
-## Products
+## Solutions
 
-- **[echofit](https://echofit.ai)** — AI-powered fitness and nutrition tracking
+| Solution | Description |
+|----------|-------------|
+| [echofit](https://github.com/echofit/echofit) | AI-powered fitness and nutrition tracking (diet, workout, health) |
+| [echomodel](https://github.com/echomodel/echomodel) | Unified skill and MCP server management across Claude Code and Gemini CLI |
 
 ## Links
 
