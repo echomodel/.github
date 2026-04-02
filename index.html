@@ -138,10 +138,16 @@
       text-decoration: none;
     }
     footer a:hover { text-decoration: underline; }
+    .domain-suffix {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: rgba(88,166,255,0.35);
+    }
     @media (max-width: 480px) {
       .hero-cards, .cards { grid-template-columns: 1fr; }
       .card-wide { grid-column: auto; }
       h1 { font-size: 1.8rem; }
+      .domain-suffix { font-size: 1.6rem; }
     }
   </style>
 </head>
@@ -149,7 +155,7 @@
   <div class="container">
     <div class="header">
       <img src="brand/echomodel-logo-512.png" alt="echomodel logo" class="logo">
-      <div style="display:flex;align-items:baseline;justify-content:center;"><h1 style="margin-bottom:0;">echomodel</h1><span style="font-size:2.1rem;font-weight:400;color:rgba(88,166,255,0.25)">.ai</span></div>
+      <div style="display:flex;align-items:baseline;justify-content:center;"><h1 style="margin-bottom:0;">echomodel</h1><span class="domain-suffix">.ai</span></div>
       <p class="tagline">AI agent ecosystem</p>
       <p class="intro">
         Open-source frameworks for building AI agent applications,
